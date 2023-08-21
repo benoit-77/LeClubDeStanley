@@ -18,20 +18,48 @@ ctEvents.on(
 			},
 
 			...typographyOption({
+				id: 'trendingBlockHeadingFont',
+				selector: '.ct-trending-block .ct-block-title',
+			}),
+
+			trendingBlockHeadingFontColor: {
+				selector: '.ct-trending-block .ct-block-title',
+				variable: 'heading-color',
+				type: 'color',
+				responsive: true,
+			},
+
+			...typographyOption({
 				id: 'trendingBlockPostsFont',
 				selector: '.ct-trending-block .ct-item-title',
 			}),
 
 			trendingBlockFontColor: [
 				{
-					selector: '.ct-trending-block',
+					selector: '.ct-trending-block a',
 					variable: 'color',
 					type: 'color:default',
 					responsive: true,
 				},
 
 				{
-					selector: '.ct-trending-block',
+					selector: '.ct-trending-block a',
+					variable: 'linkHoverColor',
+					type: 'color:hover',
+					responsive: true,
+				},
+			],
+
+			trendingBlockArrowsColor: [
+				{
+					selector: '.ct-trending-block [class*="ct-arrow"]',
+					variable: 'color',
+					type: 'color:default',
+					responsive: true,
+				},
+
+				{
+					selector: '.ct-trending-block [class*="ct-arrow"]',
 					variable: 'linkHoverColor',
 					type: 'color:hover',
 					responsive: true,

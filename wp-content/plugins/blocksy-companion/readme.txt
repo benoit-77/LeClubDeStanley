@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 1.9.0
+Stable tag: 1.9.1
 
 == Description ==
 
@@ -23,6 +23,10 @@ It runs and adds its enhancements only if the Blocksy theme is installed and act
 2. Activate the plugin by going to **Plugins** page in WordPress admin and clicking on **Activate** link.
 
 == Changelog ==
+1.9.1: 2023-08-17
+- Improvement: Trending posts module - more color and typography options
+- Improvement: Correctly display of loading spinner in account modal
+
 1.9.0: 2023-08-10
 - Improvement: General fixes and improvements
 

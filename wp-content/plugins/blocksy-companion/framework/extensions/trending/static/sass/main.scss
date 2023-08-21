@@ -96,12 +96,10 @@
 	}
 
 	.ct-block-title {
-		--fontSize: 15px;
 		grid-column: 1/-1;
 		display: flex;
 		align-items: center;
 		margin-bottom: 10px;
-		--headings-color: var(--color);
 
 		> svg {
 			margin-top: 4px;
@@ -137,7 +135,8 @@
 		background: transparent;
 		border-radius: 2px;
 		opacity: 0.5;
-		border: 1px solid var(--color);
+		color: var(--color);
+		border: 1px solid currentColor;
 		transition: var(--transition);
 
 		&:before {
@@ -152,8 +151,8 @@
 		&:hover {
 			opacity: 1;
 			color: #fff;
-			border-color: var(--paletteColor1);
-			background: var(--paletteColor1);
+			border-color: var(--linkHoverColor);
+			background: var(--linkHoverColor);
 		}
 	}
 

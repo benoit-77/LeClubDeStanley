@@ -4,7 +4,7 @@ Tags: blocks, gutenberg, gutenberg blocks, page builder, WordPress blocks
 Requires at least: 6.0
 Tested up to: 6.3
 Requires PHP: 7.0
-Stable tag: 3.10.3
+Stable tag: 3.11.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,7 +18,7 @@ Custom Blocks that transform your WordPress Block Editor into a page builder
 
 > [Try our live demo](https://demo.wpstackable.com?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
 
-[youtube https://www.youtube.com/watch?v=yzmk0qoW880]
+[youtube https://www.youtube.com/watch?v=P3xG3t-QYjw]
 
 ## Transform Gutenberg into a Page Builder.
 
@@ -35,7 +35,7 @@ Enjoy an impressive Design Library to jumpstart your designing process. Never st
 
 ## Powerful Custom Blocks
 
-Get 41 flexible custom WordPress blocks that are feature-rich and look good out of the box, and provide a robust foundation for any website even without a single line of code.
+Get 42 flexible custom WordPress blocks that are feature-rich and look good out of the box, and provide a robust foundation for any website even without a single line of code.
 
 You can choose which of these blocks you need, depending on your workflow. You can also disable blocks if you don't need them.
 
@@ -54,6 +54,7 @@ Special Blocks
 - Horizontal Scroller Block - [View Block](https://wpstackable.com/horizontal-scroller-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
 - Tabs Block - [View Block](https://wpstackable.com/tabs-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
 - Countdown Block - [View Block](https://wpstackable.com/countdown-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
+- Timeline Block - [View Block](https://wpstackable.com/timeline-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
 - Table of Contents Block - [View Block](https://wpstackable.com/table-of-contents-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
 - Posts Block — [View Block](https://wpstackable.com/blog-posts-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
 - Image Box Block — [View Block](https://wpstackable.com/image-box-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
@@ -178,6 +179,7 @@ Add animations that will bring your site to life and make it more visually engag
 
 ### News Article Updates
 
+- [v3.11 New Timeline Block](https://wpstackable.com/blog/introducing-new-timeline-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
 - [v3.10 New Tabs Block](https://wpstackable.com/blog/introducing-new-tabs-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
 - [v3.9 New Carousel Block](https://wpstackable.com/blog/introducing-new-carousel-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
 - [v3.8 New Stackable UI](https://wpstackable.com/blog/introducing-new-stackable-ui/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
@@ -285,6 +287,30 @@ Nope. Stackable only works with Gutenberg, the new WordPress editor.
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 3.11.0 =
+[Introducing: New Timeline Block](https://wpstackable.com/blog/introducing-new-timeline-block/?utm_source=wp-repo&utm_campaign=readme&utm_medium=link)
+
+* New: Timeline block
+* New: Various performance optimizations, lesser memory usage and better script loading #2835
+* New: Page now scrolls to the opened Accordion if it's not in the viewport #2726
+* New: Added a tip when incorrectly using a Google Map in a lightbox #2807
+* New: Added some new getting started videos
+* Change: Removed settings wizard
+* Fixed: Normal or centered block widths are not visible in the editor in WP 6.3
+* Fixed: Blocks were not being loaded in the Customizer for classic themes #2846
+* Fixed: Global colors and typography not showing in the editor if Content Editing Mode is enabled
+* Fixed: Custom Fields admin menu UI
+* Fixed: Blocks can encounter an error when dragging inside or from a reusable block #2768 #2791
+* Fixed: Picking an icon from the icon picker inside the editor area doesn't work #2772
+* Fixed: Block link now correctly occupies the entire container block if it has a background #2743
+* Fixed: Removed ReactDom.render console error messages #2786
+* Fixed: Native spacing tabs appear in WP < 6.3 #2837 #2828
+* Fixed: Design Library block cannot be selected
+* Fixed: Columns content max width unit resets after saving #2826
+* Fixed: Icon gap responsive settings resets after saving #2670
+* Fixed: Carousel now uses passive listeners to improve scrolling performance #2831
+* Fixed: Sometimes inactive tabs can still get mouse focus
 
 = 3.10.3 =
 * Fixed: (Hotfix update) PHP error incompatibility with some plugins

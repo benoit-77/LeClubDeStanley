@@ -26,9 +26,6 @@ if ( ! class_exists( 'Stackable_Icons' ) ) {
 			add_filter( 'stackable_editor_js_dependencies', array( $this, 'add_kit_dependency' ) );
 			// Deprecated v2 call.
 			add_filter( 'stackable_editor_js_dependencies_v2', array( $this, 'add_kit_dependency' ) );
-
-			// Add FA parameters to the script tag.
-			add_filter( 'script_loader_tag', array( $this, 'script_loader_tag' ), 10, 2 );
 		}
 
 		/**
@@ -50,16 +47,17 @@ if ( ! class_exists( 'Stackable_Icons' ) ) {
 		public function enqueue_block_editor_assets() {
 			// Load our Free Font Awesome Icons.
 			if ( apply_filters( 'stackable_load_font_awesome_kit', true ) ) {
-				add_filter( 'admin_footer', function() {
-					wp_enqueue_script(
-						'ugb-font-awesome-kit',
-						// 'https://kit.fontawesome.com/9664e939d9.js', // This is our free kit.
-						'https://use.fontawesome.com/releases/v5.15.4/js/all.js',
-						null,
-						null,
-						true
-					);
-				} );
+				wp_enqueue_script(
+					'ugb-font-awesome-kit',
+					// 'https://kit.fontawesome.com/9664e939d9.js', // This is our free kit.
+					'https://use.fontawesome.com/releases/v5.15.4/js/all.js',
+					null,
+					null,
+					true
+				);
+
+				// Add FA parameters to the script tag.
+				add_filter( 'script_loader_tag', array( $this, 'script_loader_tag' ), 10, 2 );
 			}
 		}
 
@@ -72,7 +70,7 @@ if ( ! class_exists( 'Stackable_Icons' ) ) {
 		 */
 		public function script_loader_tag( $html, $handle ) {
 			if ( $handle === 'ugb-font-awesome-kit' ) {
-				$html = preg_replace( '#></script>#', ' crossorigin="anonymous" data-auto-replace-svg="false" data-auto-add-css="false" data-family-prefix="fa" data-observe-mutations="false" data-show-missing-icons="false" async></script>', $html );
+				$html = str_replace( '></script>', ' crossorigin="anonymous" data-auto-replace-svg="false" data-auto-add-css="false" data-family-prefix="fa" data-observe-mutations="false" data-show-missing-icons="false" async></script>', $html );
 			}
 			return $html;
 		}

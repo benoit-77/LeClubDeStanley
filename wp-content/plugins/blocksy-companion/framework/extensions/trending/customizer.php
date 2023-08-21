@@ -334,9 +334,64 @@ $options = [
 					'type' => 'tab',
 					'options' => [
 
+						'trendingBlockHeadingFont' => [
+							'type' => 'ct-typography',
+							'label' => __( 'Module Title Font', 'blocksy-companion' ),
+							'value' => blocksy_typography_default_values([
+								'size' => '15px',
+							]),
+							'setting' => [ 'transport' => 'postMessage' ],
+						],
+
+						'trendingBlockHeadingFontColor' => [
+							'label' => __( 'Module Title Color', 'blocksy-companion' ),
+							'type'  => 'ct-color-picker',
+							'design' => 'block:right',
+							'responsive' => true,
+							'sync' => 'live',
+							'divider' => 'bottom',
+							'value' => [
+								'default' => [
+									'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT'),
+								],
+							],
+
+							'pickers' => [
+								[
+									'title' => __( 'Initial', 'blocksy-companion' ),
+									'id' => 'default',
+									'inherit' => [
+										'var(--heading-1-color, var(--headings-color))' => [
+											'trending_block_label_tag' => 'h1'
+										],
+
+										'var(--heading-2-color, var(--headings-color))' => [
+											'trending_block_label_tag' => 'h2'
+										],
+
+										'var(--heading-3-color, var(--headings-color))' => [
+											'trending_block_label_tag' => 'h3'
+										],
+
+										'var(--heading-4-color, var(--headings-color))' => [
+											'trending_block_label_tag' => 'h4'
+										],
+
+										'var(--heading-5-color, var(--headings-color))' => [
+											'trending_block_label_tag' => 'h5'
+										],
+
+										'var(--heading-6-color, var(--headings-color))' => [
+											'trending_block_label_tag' => 'h6'
+										]
+									]
+								],
+							],
+						],
+
 						'trendingBlockPostsFont' => [
 							'type' => 'ct-typography',
-							'label' => __( 'Posts Font', 'blocksy-companion' ),
+							'label' => __( 'Posts Title Font', 'blocksy-companion' ),
 							'value' => blocksy_typography_default_values([
 								'size' => '15px',
 								'variation' => 'n5',
@@ -345,11 +400,42 @@ $options = [
 						],
 
 						'trendingBlockFontColor' => [
-							'label' => __( 'Font Color', 'blocksy-companion' ),
+							'label' => __( 'Posts Title Font Color', 'blocksy-companion' ),
 							'type'  => 'ct-color-picker',
 							'design' => 'block:right',
-							'divider' => 'top',
 							'responsive' => true,
+							'sync' => 'live',
+							'value' => [
+								'default' => [
+									'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT'),
+								],
+
+								'hover' => [
+									'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT'),
+								],
+							],
+
+							'pickers' => [
+								[
+									'title' => __( 'Initial', 'blocksy-companion' ),
+									'id' => 'default',
+									'inherit' => 'var(--color)'
+								],
+
+								[
+									'title' => __( 'Hover', 'blocksy-companion' ),
+									'id' => 'hover',
+									'inherit' => 'var(--linkHoverColor)'
+								],
+							],
+						],
+
+						'trendingBlockArrowsColor' => [
+							'label' => __( 'Arrows Color', 'blocksy-companion' ),
+							'type'  => 'ct-color-picker',
+							'design' => 'block:right',
+							'responsive' => true,
+							'divider' => 'top',
 							'sync' => 'live',
 							'value' => [
 								'default' => [
